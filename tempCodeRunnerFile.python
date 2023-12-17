@@ -1,0 +1,28 @@
+def twoOddNUm(Arr,N):
+    bArr=[]
+    for i in range(len(Arr)):
+        #print(i,j)
+        if Arr.count(Arr[i]) %2 !=0:
+            print(i)
+            bArr.append(Arr[i])
+            print('bArr',bArr)
+    bArr=list(set(bArr))
+    bArr.sort(reverse=True)
+    return bArr
+
+
+print('s',twoOddNUm([1, 7, 5, 7, 5, 4, 7, 4],8));
+
+# from collections import Counter
+
+# class Solution:
+#     def twoOddNum(self, Arr, N):
+#         # code here
+#         d=Counter(Arr)
+#         result = []
+#         for index in d:
+#             if d[index]%2 != 0:
+#                 result.append(index)
+            
+#         result = sorted(result)[::-1]
+#         return result
